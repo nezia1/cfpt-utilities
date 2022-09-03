@@ -11,4 +11,4 @@ while getopts "h?n:" opt; do
 done
 shift $(($OPTIND - 1))
 
-find $1 -name '*.cs' ! -path '*/obj/*' ! -name 'Usings.cs' -exec sh -c 'sed -i "1i /// \\\ file $(basename -s .cs "{}")\n/// \\\ brief File summary\n/// \\\ author $name, CFPTI\n/// \\\ date $(date +%Y.%m.%d) initial version" "{}"' \;
+find $1 -name '*.cs' ! -path '*/obj/*' ! -name 'Usings.cs' -exec sh -c 'sed -i "1i /// \\\ file $(basename -s .cs "{}")\n/// \\\ brief File summary\n/// \\\ author "$0", CFPTI\n/// \\\ date $(date +%Y.%m.%d) initial version" "{}"' $name \;
