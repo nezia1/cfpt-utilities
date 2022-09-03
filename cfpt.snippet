@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>CFPT Header</Title>
+			<Description>Generates a header compatible with MKDocs.</Description>
+			<Shortcut>cfpt</Shortcut>
+        </Header>
+        <Snippet>
+			<Declarations>
+				<Literal>
+					<ID>file</ID>
+					<Default>File</Default>
+					<ToolTip>File name</ToolTip>
+				</Literal>
+
+				<Literal>
+					<ID>brief</ID>
+					<Default>File summary</Default>
+					<ToolTip>Brief (summary)</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>author</ID>
+					<Default>Author</Default>
+					<ToolTip>Author</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>date</ID>
+					<Default>Date</Default>
+					<ToolTip>Date</ToolTip>
+				</Literal>
+
+			</Declarations>
+            <Code Language="Csharp">
+				/// \file $file$
+                /// \brief $brief$
+				/// \author $author$
+                /// \date $date$ initial version
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
